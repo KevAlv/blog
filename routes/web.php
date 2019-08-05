@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/*Route::get('/', function () {
+	$posts= ['laravel basico','laravel medio','laravel avanzado'];
+    return view('welcome',compact('posts'));
+});*/
+Route::get('/','PagesController@index');
+
+Route::get('/acerca','PagesController@acerca');
+
+Route::get('contacto','PagesController@contacto');

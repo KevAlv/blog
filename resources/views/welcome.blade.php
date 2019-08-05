@@ -80,9 +80,14 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
+              
+@if(empty($posts))
+    <h2>Aun no hay articulos</h2>
+@endif
+                 @foreach ($posts as $post )
+                 <li>{{$post}}</li>
+                 @endforeach
+          
 
        
             </div>
