@@ -1,4 +1,5 @@
 @extends('layouts')
-<h2>Quienes somos</h2>
+
 @section('content')
+<h2>Contacto</h2>
 @endsection

@@ -24,7 +24,7 @@ class PagesController extends Controller
  public function contacto()
  {
 
-    return 'Contactanos';
+    return view('contacto');
 
  }
 
