@@ -18,5 +18,7 @@
 Route::get('/','PagesController@index');
 
 Route::get('/acerca','PagesController@acerca');
+Route::get('/articulos','ArticulosController@index');
+
 
 Route::get('contacto','PagesController@contacto');
