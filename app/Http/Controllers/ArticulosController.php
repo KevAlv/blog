@@ -15,8 +15,7 @@ $articulos=Articulo::all();
     }
 
     public function show(Articulo $articulo){
-    	
-    	
+    
 return view('articulos.show',compact('articulo')); 
     }
 }
