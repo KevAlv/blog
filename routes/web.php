@@ -22,6 +22,6 @@ Route::get('/articulos','ArticulosController@index');
 Route::get('/articulos/{articulo}','ArticulosController@show');
 
 Route::get('categorias/','CategoriasController@index');
-Route::get('categorias/{categoria}','Categorias@show')
+Route::get('categorias/{categoria}','CategoriasController@show');
 
 Route::get('contacto','PagesController@contacto');

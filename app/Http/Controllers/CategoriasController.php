@@ -10,4 +10,11 @@ class CategoriasController extends Controller
 $categorias=Categoria::All();
 return view('categorias.index',compact('categorias'));
     }
+
+
+    public function show(Categoria $categoria){
+
+    	return view('categorias.show',compact('categoria'));
+
+    }
 }

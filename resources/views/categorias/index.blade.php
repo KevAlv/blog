@@ -4,7 +4,9 @@
 <ul>
 @foreach($categorias as $categoria)
 <li>
-	{{$categoria->nombre}}
+	<a href="/categorias/{{$categoria->id}}">{{$categoria->nombre}}</a>
+	
+
 </li>
 @endforeach
 </ul>
