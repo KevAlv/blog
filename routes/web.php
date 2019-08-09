@@ -19,9 +19,14 @@ Route::get('/','PagesController@index');
 
 Route::get('/acerca','PagesController@acerca');
 Route::get('/articulos','ArticulosController@index');
+Route::get('/articulos','ArticulosController@create');
+Route::post('/articulos','ArticulosController@store');
+
+
 Route::get('/articulos/{articulo}','ArticulosController@show');
 
 Route::get('categorias/','CategoriasController@index');
 Route::get('categorias/{categoria}','CategoriasController@show');
 
 Route::get('contacto','PagesController@contacto');
+

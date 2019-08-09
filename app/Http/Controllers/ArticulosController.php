@@ -18,4 +18,26 @@ $articulos=Articulo::all();
     
 return view('articulos.show',compact('articulo')); 
     }
+public  function create()
+{
+return view('articulos.create');
+}
+
+
+
+public function store(Request $request)
+{
+//vamos almacenar en la bd los datos
+	//metodo 1
+/*	$articulo = new Articulo;
+	$articulo->titulo=$request->input('titulo');
+	$articulo->contenido=$request->input('contenido');
+	$articulo->categoria_id=$request->input('categoria_id');
+$articulo->save();*/
+
+// metodo 2 para tablas grandes
+//para que funcione correctamente agragamos el campo  protected fillable en el modelo
+Articulo::create($request->All());
+return "completado";
+}
 }

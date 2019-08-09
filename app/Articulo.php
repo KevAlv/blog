@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Articulo extends Model
 {
-    //
+    protected $fillable=['titulo','contenido','categoria_id'];
 
     public function tituloInvertir(){
     	return strrev($this->titulo);    }
