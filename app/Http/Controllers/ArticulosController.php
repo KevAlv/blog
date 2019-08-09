@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\Articulo;
+use App\Http\Requests\CrearArticulosRequest;
+
 use Illuminate\Http\Request;
 
 class ArticulosController extends Controller
@@ -25,7 +27,7 @@ return view('articulos.create');
 
 
 
-public function store(Request $request)
+public function store(CrearArticulosRequest $request)
 {
 //vamos almacenar en la bd los datos
 	//metodo 1
@@ -37,6 +39,7 @@ $articulo->save();*/
 
 // metodo 2 para tablas grandes
 //para que funcione correctamente agragamos el campo  protected fillable en el modelo
+
 Articulo::create($request->All());
 return "completado";
 }
